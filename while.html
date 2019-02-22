@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>PS</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+  <style>
+</style>
+</head>
+<body onbeforeprint="bpr()" onafterprint="apr()">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-12 text-center mt-5 mb-5">
+				<h1>while</h1><br>
+
+
+<h5> From :   <input type="text" id="n1"></h5><br>
+<h5>To :   <input type="text" id="n2"></h5><br>
+<button onclick="p()">Submit</button> 
+<h2 id="q"></h2>
+<br>
+<button onclick="w()">Today</button>
+<button onclick="e()">Yesterday</button>
+<button onclick="r()">Tomorrow</button><br>
+<h2 id="demo"></h2>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+
+<script>
+  function p(){
+var x=document.getElementById("n1").value;
+var y=document.getElementById("n2").value;
+var z="";
+var i = x;
+
+while (i < y) {
+  z += "<br>The number is " + i;
+  i++;
+    document.getElementById("q").innerHTML = z;}
+
+}
+function w(){ 
+    var day;
+switch (new Date().getDay()) {
+  case 0:
+    day = "Sunday";
+    break;
+  case 1:
+    day = "Monday";
+    break;
+  case 2:
+    day = "Tuesday";
+    break;
+  case 3:
+    day = "Wednesday";
+    break;
+  case 4:
+    day = "Thursday";
+    break;
+  case 5:
+    day = "Friday";
+    break;
+  case  6:
+    day = "Saturday";
+}
+document.getElementById("demo").innerHTML = "Today is " + day;
+  
+}
+function e(){ 
+    var day;
+switch (new Date().getDay()-1) {
+  case 0:
+    day = "Sunday";
+    break;
+  case 1:
+    day = "Monday";
+    break;
+  case 2:
+    day = "Tuesday";
+    break;
+  case 3:
+    day = "Wednesday";
+    break;
+  case 4:
+    day = "Thursday";
+    break;
+  case 5:
+    day = "Friday";
+    break;
+  case  6:
+    day = "Saturday";
+}
+document.getElementById("demo").innerHTML = "Today is " + day;
+  
+}
+function r(){ 
+    var day;
+switch (new Date().getDay()+1) {
+  case 0:
+    day = "Sunday";
+    break;
+  case 1:
+    day = "Monday";
+    break;
+  case 2:
+    day = "Tuesday";
+    break;
+  case 3:
+    day = "Wednesday";
+    break;
+  case 4:
+    day = "Thursday";
+    break;
+  case 5:
+    day = "Friday";
+    break;
+  case  6:
+    day = "Saturday";
+}
+document.getElementById("demo").innerHTML = "Today is " + day;
+  
+}
+
+</script>
+
+
+
+</html>
